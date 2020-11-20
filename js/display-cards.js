@@ -1,14 +1,16 @@
-function randomCards() {
-  let resultRandom = totalEmojis.sort(function () {
+function randomCards(cards) {
+  let totalCards = cards.concat(cards);
+
+  let resultRandom = totalCards.sort(function () {
     return 0.5 - Math.random();
   });
   return resultRandom;
 }
 
 // ------------------------*Display Cards*----------------
-function displayCards() {
+function displayCards(cards) {
   let mesa = document.querySelector("#mesa");
-  let randomSetOfCards = randomCards();
+  let randomSetOfCards = randomCards(cards);
   mesa.innerHTML = "";
 
   randomSetOfCards.forEach(function (element) {

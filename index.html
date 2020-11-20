@@ -8,7 +8,7 @@
     />
     <title>Domestika</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600"
+      href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:400,600"
       rel="stylesheet"
     />
     <link href="css/site.css" rel="stylesheet" />
@@ -16,23 +16,37 @@
   </head>
 
   <body>
-    <div class="contadores">
-      <div class="contador-item">
-        <h4 class="cabecera-titulo">Movimientos</h4>
-        <div class="cabecera-num">
-          <span id="mov">00</span>/<span id="mov-total">20</span>
-        </div>
-      </div>
-      <div id="cronometro" class="contador-item">
-        <h4 class="cabecera-titulo">Tiempo</h4>
-        <div class="cabecera-num">
-          <span id="minutos">00</span>:<span id="segundos">00</span>
-        </div>
+    <div id="bienvenida" class="bienvenida">
+      <h1>👋 ¡Hola! 👋</h1>
+      <div class="bienvenida-botones">
+        <button id="juego-normal">¡Quiero jugar!</button>
+        <button id="juego-relax">Modo relax</button>
       </div>
     </div>
+    <header class="cabecera">
+      <div class="contadores">
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Movimientos</h4>
+          <div class="cabecera-num">
+            <span id="mov">00</span>/<span id="mov-total">20</span>
+          </div>
+        </div>
+        <div id="cronometro" class="contador-item">
+          <h4 class="cabecera-titulo">Tiempo</h4>
+          <div class="cabecera-num">
+            <span id="minutos">00</span>:<span id="segundos">00</span>
+          </div>
+        </div>
+      </div>
+      <div class="nivel">
+        <h4 class="cabecera-titulo">Nivel</h4>
+        <div class="cabecera-num"><span id="nivel">01</span></div>
+      </div>
+      <button id="control-nivel" class="control-nivel">…</button>
+    </header>
     <main>
       <div id="mesa" class="mesa"></div>
-       <div id="subeNivel" class="sube-nivel">
+      <div id="subeNivel" class="sube-nivel">
         <div class="modal">
           <h2>¡Muy bien!</h2>
           <button id="subir">Siguiente nivel</button>
@@ -57,14 +71,14 @@
         <div class="modal">
           <h2>¡Enhorabuena!</h2>
           <p>Has superado todos los niveles 🏆</p>
-          <button id="endGame-button" class="reiniciar">Reiniciar</button>
+          <button class="reiniciar">Reiniciar</button>
         </div>
       </div>
     </main>
-    <div class="selecciona-nivel">
+    <!-- <div class="selecciona-nivel">
       <button id="cierra-niveles" class="cierra-niveles">&times;</button>
       <ul></ul>
-    </div>
+    </div> -->
 
     <audio
       src="sonidos/acierto.mp3"
@@ -85,14 +99,17 @@
       preload="auto"
     ></audio>
 
-    </main>
     <script src="js/globalVars.js"></script>
-    <script src="js/succes-error.js"></script>
-    <script src="js/display-cards.js"></script>
     <script src="js/revealed-compare.js"></script>
-    <script src="js/counter.js"></script>
+    <script src="js/display-cards.js"></script>
+    <script src="js/succes-error.js"></script>
     <script src="js/chronometer.js"></script>
+    <script src="js/counter.js"></script>
     <script src="js/finish.js"></script>
+    <script src="js/levels.js"></script>
+    <script src=""></script>
+    <script src=""></script>
     <script src="js/start.js"></script>
+    <script src=""></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 function reveal() {
+  let cardsLeft;
   let totalReveal = document.querySelectorAll(".descubierta:not(.acertada)");
   // var of cards selected two compare
 
@@ -13,8 +14,12 @@ function reveal() {
   if (totalReveal < 2) {
     return;
   }
-
   compare(cardRevealed);
+  counterReload();
+  cardsLeft = document.querySelectorAll(".tarjeta:not(.acertada)");
+  if (cardsLeft.length === 0) {
+    setTimeout(finishReload(), 1000);
+  }
 }
 //------------------*Cards compare*---------
 function compare(cardsToCompare) {

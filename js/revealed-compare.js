@@ -8,6 +8,7 @@ function reveal() {
     return;
   }
   this.classList.add("descubierta");
+  document.getElementById("sonido-carta").cloneNode().play();
 
   let cardRevealed = document.querySelectorAll(".descubierta:not(.acertada)");
 

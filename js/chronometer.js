@@ -3,7 +3,7 @@ function startChronometer() {
   let minutes = 1;
   let secondsText = document.getElementById("segundos");
   let minutesText = document.getElementById("minutos");
-  let crono;
+
   function reloadCount() {
     console.log(seconds);
     seconds--;
@@ -14,7 +14,8 @@ function startChronometer() {
     if (minutes < 0) {
       minutes = 00;
       seconds = 00;
-      clearInterval(crono);
+      clearInterval(stopwatch);
+      timeOver();
     }
     if (seconds < 10) {
       secondsText.innerHTML = "0" + seconds;
@@ -25,5 +26,5 @@ function startChronometer() {
     minutesText.innerHTML = minutes;
     secondsText.innerHTML = seconds;
   }
-  crono = setInterval(reloadCount, 1000);
+  stopwatch = setInterval(reloadCount, 1000);
 }

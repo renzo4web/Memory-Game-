@@ -18,7 +18,7 @@ function displayCards(cards) {
     let tarjet = document.createElement("div");
     //modifico el inner del div agregandole algo
     tarjet.innerHTML =
-      "<div class='tarjeta' data-valor= " +
+      "<div class='tarjeta descubierta' data-valor= " +
       element +
       ">" +
       "<div class='tarjeta__contenido'>" +

@@ -6,40 +6,40 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Domestika</title>
+    <title>Memory Game</title>
     <link
       href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:400,600"
       rel="stylesheet"
     />
     <link href="css/site.css" rel="stylesheet" />
-    <link href="css/4.css" rel="stylesheet" />
+    <link href="css/estilos.css" rel="stylesheet" />
   </head>
 
   <body>
     <div id="bienvenida" class="bienvenida">
-      <h1>👋 ¡Hola! 👋</h1>
+      <h1>👋 ¡Welcome! 👋</h1>
       <div class="bienvenida-botones">
-        <button id="juego-normal">¡Quiero jugar!</button>
-        <button id="juego-relax">Modo relax</button>
+        <button id="juego-normal">¡Normal Mode!</button>
+        <button id="juego-relax">Chill and Play</button>
       </div>
     </div>
     <header class="cabecera">
       <div class="contadores">
         <div class="contador-item">
-          <h4 class="cabecera-titulo">Movimientos</h4>
+          <h4 class="cabecera-titulo">Movements</h4>
           <div class="cabecera-num">
             <span id="mov">00</span>/<span id="mov-total">20</span>
           </div>
         </div>
         <div id="cronometro" class="contador-item">
-          <h4 class="cabecera-titulo">Tiempo</h4>
+          <h4 class="cabecera-titulo">Time</h4>
           <div class="cabecera-num">
             <span id="minutos">00</span>:<span id="segundos">00</span>
           </div>
         </div>
       </div>
       <div class="nivel">
-        <h4 class="cabecera-titulo">Nivel</h4>
+        <h4 class="cabecera-titulo">Level</h4>
         <div class="cabecera-num"><span id="nivel">01</span></div>
       </div>
       <button id="control-nivel" class="control-nivel">…</button>
@@ -48,37 +48,37 @@
       <div id="mesa" class="mesa"></div>
       <div id="subeNivel" class="sube-nivel">
         <div class="modal">
-          <h2>¡Muy bien!</h2>
-          <button id="subir">Siguiente nivel</button>
-          <button class="reiniciar">Reiniciar</button>
+          <h2>¡Well done my friend!</h2>
+          <button id="subir">Next Level</button>
+          <button class="reiniciar">Restart</button>
         </div>
       </div>
       <div id="gameOver" class="game-over">
         <div class="modal">
           <h2>¡Oh no!</h2>
-          <p>Te has quedado sin movimientos 😭</p>
-          <button class="reiniciar">Reiniciar</button>
+          <p>You've run out of moves 😭</p>
+          <button class="reiniciar">Restart</button>
         </div>
       </div>
       <div id="timeOver" class="game-over">
         <div class="modal">
           <h2>¡Oh no!</h2>
-          <p>Te has quedado sin tiempo 😭</p>
-          <button class="reiniciar">Reiniciar</button>
+          <p>You've run out of time 😭</p>
+          <button class="reiniciar">Restart</button>
         </div>
       </div>
       <div id="endGame" class="end-game">
         <div class="modal">
-          <h2>¡Enhorabuena!</h2>
-          <p>Has superado todos los niveles 🏆</p>
-          <button class="reiniciar">Reiniciar</button>
+          <h2>¡Wow what a memory!</h2>
+          <p>You have passed all the levels🏆</p>
+          <button class="reiniciar">Restart</button>
         </div>
       </div>
     </main>
-    <!-- <div class="selecciona-nivel">
+    <div class="selecciona-nivel">
       <button id="cierra-niveles" class="cierra-niveles">&times;</button>
       <ul></ul>
-    </div> -->
+    </div>
 
     <audio
       src="sonidos/acierto.mp3"
@@ -98,6 +98,7 @@
       id="sonido-carta"
       preload="auto"
     ></audio>
+    <footer>Made By @w3renzo</footer>
 
     <script src="js/globalVars.js"></script>
     <script src="js/revealed-compare.js"></script>

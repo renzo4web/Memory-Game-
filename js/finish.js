@@ -6,8 +6,4 @@ function finishReload() {
   } else {
     document.getElementById("endGame").classList.add("visible");
   }
-  // MOvements Finish
-  //   if (movements < maxCounter:) {
-  //     document.getElementById("gameOver").classList.add("visible");
-  //   }
 }

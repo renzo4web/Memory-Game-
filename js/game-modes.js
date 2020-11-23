@@ -1,3 +1,5 @@
+writeLevels(actualLevel);
+
 document
   .getElementById("juego-normal")
   .addEventListener("click", startNormalMode);
@@ -10,9 +12,6 @@ function startNormalMode() {
   relaxMode = false;
   document.getElementById("bienvenida").classList.remove("visible");
   startGame();
-  document
-    .getElementsByClassName("control-nivel")
-    .classList.add("control-oculto");
 }
 
 function startRelaxMode() {
@@ -28,4 +27,25 @@ function gameOver() {
 
 function timeOver() {
   document.getElementById("timeOver").classList.add("visible");
+}
+
+function writeLevels() {
+  let menulLvl = document.querySelector(".selecciona-nivel ul");
+  levels.forEach(function (element, index) {
+    let ctrlLevel = document.createElement("li");
+    ctrlLevel.innerHTML =
+      "<button class='nivel' data-nivel=" +
+      index +
+      ">Level " +
+      (index + 1) +
+      "</button>";
+    menulLvl.appendChild(ctrlLevel);
+  });
+}
+
+function changeLevel() {
+  let level = parseInt(this.dataset.nivel);
+  actualLevel = level;
+  reloadLevel();
+  startGame();
 }

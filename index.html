@@ -1,116 +1,105 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>Memory Game</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:400,600"
-      rel="stylesheet"
-    />
-    <link href="css/site.css" rel="stylesheet" />
-    <link href="css/estilos.css" rel="stylesheet" />
-  </head>
+<html lang="en">
 
-  <body>
-    <div id="bienvenida" class="bienvenida">
-      <h1>👋 ¡Welcome! 👋</h1>
-      <div class="bienvenida-botones">
-        <button id="juego-normal">¡Normal Mode!</button>
-        <button id="juego-relax">Chill and Play</button>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Memory Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:400,600" rel="stylesheet" />
+  <link href="css/site.css" rel="stylesheet" />
+  <link href="css/estilos.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="bienvenida2" class="bienvenida2">
+    <form id="form">
+      <h1>🧠Memory Game🧠</h1>
+      <input type="text" id="username" placeholder="👋 What's your name" required minlength="2" maxlength="14">
+      <button type="submit">Go</button>
+    </form>
+  </div>
+  <!---   Start Game  --->
+  <div id="bienvenida" class="bienvenida">
+    <h1 id="welcome-user"></h1>
+    <div class="bienvenida-botones">
+      <button id="juego-normal">¡Normal Mode!</button>
+      <button id="juego-relax">Chill and Play</button>
+    </div>
+  </div>
+  <header class="cabecera">
+    <div class="contadores">
+      <div class="contador-item">
+        <h4 class="cabecera-titulo">Movements</h4>
+        <div class="cabecera-num">
+          <span id="mov">00</span>/<span id="mov-total">20</span>
+        </div>
+      </div>
+      <div id="cronometro" class="contador-item">
+        <h4 class="cabecera-titulo">Time</h4>
+        <div class="cabecera-num">
+          <span id="minutos">00</span>:<span id="segundos">00</span>
+        </div>
       </div>
     </div>
-    <header class="cabecera">
-      <div class="contadores">
-        <div class="contador-item">
-          <h4 class="cabecera-titulo">Movements</h4>
-          <div class="cabecera-num">
-            <span id="mov">00</span>/<span id="mov-total">20</span>
-          </div>
-        </div>
-        <div id="cronometro" class="contador-item">
-          <h4 class="cabecera-titulo">Time</h4>
-          <div class="cabecera-num">
-            <span id="minutos">00</span>:<span id="segundos">00</span>
-          </div>
-        </div>
-      </div>
-      <div class="nivel">
-        <h4 class="cabecera-titulo">Level</h4>
-        <div class="cabecera-num"><span id="nivel">01</span></div>
-      </div>
-      <button id="control-nivel" class="control-nivel">…</button>
-    </header>
-    <main>
-      <div id="mesa" class="mesa"></div>
-      <div id="subeNivel" class="sube-nivel">
-        <div class="modal">
-          <h2>¡Well done my friend!</h2>
-          <button id="subir">Next Level</button>
-          <button class="reiniciar">Restart</button>
-        </div>
-      </div>
-      <div id="gameOver" class="game-over">
-        <div class="modal">
-          <h2>¡Oh no!</h2>
-          <p>You've run out of moves 😭</p>
-          <button class="reiniciar">Restart</button>
-        </div>
-      </div>
-      <div id="timeOver" class="game-over">
-        <div class="modal">
-          <h2>¡Oh no!</h2>
-          <p>You've run out of time 😭</p>
-          <button class="reiniciar">Restart</button>
-        </div>
-      </div>
-      <div id="endGame" class="end-game">
-        <div class="modal">
-          <h2>¡Wow what a memory!</h2>
-          <p>You have passed all the levels🏆</p>
-          <button class="reiniciar">Restart</button>
-        </div>
-      </div>
-    </main>
-    <div class="selecciona-nivel">
-      <button id="cierra-niveles" class="cierra-niveles">&times;</button>
-      <ul></ul>
+    <div class="nivel">
+      <h4 class="cabecera-titulo">Level</h4>
+      <div class="cabecera-num"><span id="nivel">01</span></div>
     </div>
+    <button id="control-nivel" class="control-nivel">…</button>
+  </header>
+  <main>
+    <div id="mesa" class="mesa"></div>
+    <div id="subeNivel" class="sube-nivel">
+      <div class="modal">
+        <h2>¡Well done my friend!</h2>
+        <button id="subir">Next Level</button>
+        <button class="reiniciar">Restart</button>
+      </div>
+    </div>
+    <div id="gameOver" class="game-over">
+      <div class="modal">
+        <h2>¡Oh no!</h2>
+        <p>You've run out of moves 😭</p>
+        <button class="reiniciar">Restart</button>
+      </div>
+    </div>
+    <div id="timeOver" class="game-over">
+      <div class="modal">
+        <h2>¡Oh no!</h2>
+        <p>You've run out of time 😭</p>
+        <button class="reiniciar">Restart</button>
+      </div>
+    </div>
+    <div id="endGame" class="end-game">
+      <div class="modal">
+        <h2>¡Wow what a memory!</h2>
+        <p>You have passed all the levels🏆</p>
+        <button class="reiniciar">Restart</button>
+      </div>
+    </div>
+  </main>
+  <div class="selecciona-nivel">
+    <button id="cierra-niveles" class="cierra-niveles">&times;</button>
+    <ul></ul>
+  </div>
 
-    <audio
-      src="sonidos/acierto.mp3"
-      class="sonido"
-      id="sonido-acierto"
-      preload="auto"
-    ></audio>
-    <audio
-      src="sonidos/error.mp3"
-      class="sonido"
-      id="sonido-error"
-      preload="auto"
-    ></audio>
-    <audio
-      src="sonidos/carta.mp3"
-      class="sonido"
-      id="sonido-carta"
-      preload="auto"
-    ></audio>
-    <footer>Made By @w3renzo</footer>
+  <audio src="sonidos/acierto.mp3" class="sonido" id="sonido-acierto" preload="auto"></audio>
+  <audio src="sonidos/error.mp3" class="sonido" id="sonido-error" preload="auto"></audio>
+  <audio src="sonidos/carta.mp3" class="sonido" id="sonido-carta" preload="auto"></audio>
+  <footer>Made By @w3renzo</footer>
 
-    <script src="js/globalVars.js"></script>
-    <script src="js/revealed-compare.js"></script>
-    <script src="js/display-cards.js"></script>
-    <script src="js/succes-error.js"></script>
-    <script src="js/chronometer.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/finish.js"></script>
-    <script src="js/levels.js"></script>
-    <script src=""></script>
-    <script src=""></script>
-    <script src="js/game-modes.js"></script>
-    <script src="js/start.js"></script>
-  </body>
+  <script src="js/globalVars.js"></script>
+  <script src="js/username.js"></script>
+  <script src="js/revealed-compare.js"></script>
+  <script src="js/display-cards.js"></script>
+  <script src="js/succes-error.js"></script>
+  <script src="js/chronometer.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/finish.js"></script>
+  <script src="js/levels.js"></script>
+  <script src=""></script>
+  <script src="js/game-modes.js"></script>
+  <script src="js/start.js"></script>
+</body>
+
 </html>

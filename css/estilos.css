@@ -5,7 +5,8 @@ body {
   position: relative;
 }
 
-.bienvenida {
+.bienvenida,
+.bienvenida2 {
   display: none;
   position: absolute;
   top: 0;
@@ -20,7 +21,8 @@ body {
   z-index: 1;
 }
 
-.bienvenida.visible {
+.bienvenida.visible,
+.bienvenida2.visible {
   display: flex;
 }
 
@@ -35,7 +37,8 @@ body {
   display: flex;
 }
 
-.bienvenida button {
+.bienvenida button,
+.bienvenida2 button {
   padding: 1rem 3rem;
   margin: 0 1rem;
   min-width: 20rem;
@@ -133,19 +136,23 @@ main {
 }
 
 @keyframes error {
+
   10%,
   90% {
     transform: rotateY(-180deg) translateX(-1px);
   }
+
   20%,
   80% {
     transform: rotateY(-180deg) translateX(2px);
   }
+
   30%,
   50%,
   70% {
     transform: rotateY(-180deg) translateX(-4px);
   }
+
   40%,
   60% {
     transform: rotateY(-180deg) translateX(4px);
@@ -328,4 +335,27 @@ footer {
   font-size: medium;
   color: white;
   background-color: var(--hotpink);
+}
+
+
+
+input {
+  background-color: var(--darkblue);
+  caret-color: red;
+  text-align: center;
+  color: white;
+  height: 60px;
+  width: 400px;
+  font-size: ;
+  font-size: 2rem;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+
+
+input button:hover {
+  cursor: pointer;
 }

@@ -35,8 +35,11 @@ document.querySelectorAll(".reiniciar").forEach(function (element) {
 // new level click
 document.getElementById("subir").addEventListener("click", loadNewLevel);
 
-//Welcome display
-document.getElementById("bienvenida").classList.add("visible");
+//Username display
+document.getElementById("bienvenida2").classList.add("visible");
+
+//Welcome personalize
+formUser.addEventListener("submit", userData);
 
 document
   .getElementById("control-nivel")

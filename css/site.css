@@ -2,9 +2,9 @@
   --bg: #fafafa;
   --font: "Archivo", sans-serif;
   --font-display: "Archivo Narrow", sans-serif;
-  --hotpink: rgba(9, 9, 121, 1);
+  --darkblue: rgba(9, 9, 121, 1);
   --orange: rgba(0, 212, 255, 1);
-  --gradient: linear-gradient(35deg, var(--orange), var(--hotpink));
+  --gradient: linear-gradient(35deg, var(--orange), var(--darkblue));
 }
 
 * {

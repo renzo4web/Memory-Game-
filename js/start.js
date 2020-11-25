@@ -18,6 +18,7 @@ function startGame() {
   });
 
   if (!relaxMode) {
+    clearInterval(stopwatch);
     startChronometer();
   } else {
     document.getElementById("cronometro").classList.add("cronometro-oculto");

@@ -1,7 +1,7 @@
 let formUser = document.getElementById("form");
 let movements = 0;
 let relaxMode = false;
-let stopwatch = 00;
+let stopwatch = 0;
 
 let groupEmojis = [
   ["🦄", "🍦"],
@@ -12,7 +12,8 @@ let groupEmojis = [
 
 let actualLevel = 0;
 
-let levels = [{
+let levels = [
+  {
     cards: groupEmojis[0],
     maxMovements: 3,
     time: 1,

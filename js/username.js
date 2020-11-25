@@ -2,7 +2,7 @@ function userData(e) {
   e.preventDefault();
   let welcomeMensaje = document.getElementById("welcome-user");
   let namePlayer = document.getElementById("username").value;
-  let customMsj = ` 👋 Welcome ${namePlayer} , Good Luck.👋 `;
+  let customMsj = `👋 Welcome ${namePlayer}, Good Luck.👋`;
   welcomeMensaje.textContent = customMsj;
 
   document.getElementById("bienvenida2").classList.remove("visible");

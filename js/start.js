@@ -1,4 +1,5 @@
 function startGame() {
+  document.querySelector(".selecciona-nivel").classList.remove("visible");
   document.getElementById("endGame").classList.remove("visible");
   document.getElementById("gameOver").classList.remove("visible");
   document.getElementById("subeNivel").classList.remove("visible");

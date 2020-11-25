@@ -3,8 +3,8 @@
   --font: "Archivo", sans-serif;
   --font-display: "Archivo Narrow", sans-serif;
   --darkblue: rgba(9, 9, 121, 1);
-  --orange: rgba(0, 212, 255, 1);
-  --gradient: linear-gradient(35deg, var(--orange), var(--darkblue));
+  --lightblue: rgba(0, 212, 255, 1);
+  --gradient: linear-gradient(35deg, var(--lightblue), var(--darkblue));
 }
 
 * {

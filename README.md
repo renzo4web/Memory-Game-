@@ -23,13 +23,6 @@ Memory game with user and levels.
 **I learned the interaction of javascript and the DOM, events (event Listener), and how to maintain clean code by modularizing code into different javascript files.**
 
 
-## Authors
-
-👤 **Author**
-
-- GitHub: [@w3renzo](https://github.com/w3renzo)
-- Twitter: [@w3renzo](https://twitter.com/w3renzo)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
